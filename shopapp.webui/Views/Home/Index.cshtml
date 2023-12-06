@@ -1,0 +1,49 @@
+@model ProductListViewModel
+
+
+
+
+    <div class="row p-lg-2 p-1">
+
+        <div class="d-none d-lg-block col-md-3">
+        <nav class="nav nav-pills flex column flex-nowrap overflow-auto" style="height:400px;">
+            @await Component.InvokeAsync("Categories")
+        </nav>
+            
+        
+        </div>
+        <div class="col-md-9">
+            <partial name="_header">
+            <partial name="_search">
+        </div>
+
+    </div>
+
+<section class="pt-4">
+  <div class="container">
+      <header>
+           <h3 class="mb-md-3 mb-0 text-center">Son Eklenenler</h3>
+      </header>
+
+      <div class="row">
+         @foreach (var product in Model.Products)
+            {    
+                <div class="col-lg-3 col-md-4 col-sm-6" >
+                    @await Html.PartialAsync("_product", product)   
+                </div>       
+            }    
+      </div>
+
+  </div>
+
+</section>
+
+
+
+
+@section Scripts
+{
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+}

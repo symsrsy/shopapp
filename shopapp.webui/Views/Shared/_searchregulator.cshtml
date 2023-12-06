@@ -1,0 +1,33 @@
+ 
+ <div class="card mt-3">
+      <div class="card-body">
+            <form action="/search">
+  
+
+                <div class="form-check">
+                    <input name="q" class="form-check-input" type="checkbox" value="PWM Regülatör" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    PWM Şarj Regülatörü
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input name="q" class="form-check-input" type="checkbox" value="MPPT Regülatör" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    MPPT Şarj Regülatörü
+                    </label>
+                </div>
+            </form>
+      </div>
+  </div>
+  
+
+   <script>
+   jOuery(document).ready(function ($) {
+    $("#filter").submit(function () {
+        $(this).find(":input").filter(function() { return !this.value;}).attr("disabled","disabled");
+        return true;
+    });
+    $("form").find(":input").prop("disabled", false);
+   });
+   </script>

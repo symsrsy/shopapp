@@ -1,0 +1,36 @@
+ <div class="card mt-3">
+    
+      <div class="card-body">
+            <form action="/search">
+                
+   
+
+            <div class="form-check">
+                <input name="q" class="form-check-input" type="checkbox" value="Jel Akü" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                Jel Akü
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input name="q" class="form-check-input" type="checkbox" value="Lityum Akü" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                Lityum Akü
+                </label>
+            </div>
+
+         </form>
+      </div>
+  </div>
+  
+
+
+   <script>
+   jOuery(document).ready(function ($) {
+    $("#filter").submit(function () {
+        $(this).find(":input").filter(function() { return !this.value;}).attr("disabled","disabled");
+        return true;
+    });
+    $("form").find(":input").prop("disabled", false);
+   });
+   </script>

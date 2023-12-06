@@ -1,0 +1,64 @@
+ <div class="card mt-3">
+      <div class="card-body">
+            <form action="/search">
+                
+   
+
+                <div class="form-check">
+                    <input name="q" class="form-check-input" type="checkbox" value="Off Grid" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    Off-Grid
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input name="q" class="form-check-input" type="checkbox" value="On Grid" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    On-Grid
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input name="q" class="form-check-input" type="checkbox" value="Tam Sinüs İnverter" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    Tam Sinüs
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input  name="q" class="form-check-input" type="checkbox" value="Tam Sinüs Şarjlı İnverter" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    Tam Sinüs Şarjlı
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input name="q" class="form-check-input" type="checkbox" value="Tam Sinüs UPS" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    Tam Sinüs UPS
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input name="q" class="form-check-input" type="checkbox" value="Tam Sinüs Akıllı" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    Tam Sinüs Akıllı
+                    </label>
+                </div>
+
+
+         </form>
+      </div>
+  </div>
+  
+
+
+   <script>
+   jOuery(document).ready(function ($) {
+    $("#filter").submit(function () {
+        $(this).find(":input").filter(function() { return !this.value;}).attr("disabled","disabled");
+        return true;
+    });
+    $("form").find(":input").prop("disabled", false);
+   });
+   </script>

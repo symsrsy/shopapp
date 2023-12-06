@@ -1,0 +1,20 @@
+{
+  "name": "shopapp.webui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "ckeditor": "^4.12.1",
+    "fslightbox": "^3.4.1",
+    "jquery-validation": "^1.19.1",
+    "jquery-validation-unobtrusive": "^3.2.11",
+    "node-sass": "^8.0.0"
+  },
+  "scripts": {
+    "scss": "node-sass --watch wwwroot/scss/ -o wwwroot/css/ --output-style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
